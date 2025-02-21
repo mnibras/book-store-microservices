@@ -1,0 +1,13 @@
+spring:
+    application:
+        name: catalog-service
+server:
+    port: 8081
+    shutdown: GRACEFUL
+
+management:
+    endpoints:
+        web:
+            exposure:
+                include:
+                    - '*'
