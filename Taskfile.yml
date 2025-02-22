@@ -1,0 +1,35 @@
+version: '3'
+
+vars:
+    HOST_OS: "{{default OS .HOST_OS}}"
+    MVNW: '{{if eq .HOST_OS "windows"}}mvnw.cmd{{else}}./mvnw{{end}}'
+    DC_DIR: "deployment/docker-compose"
+    INFRA_DC_FILE: "{{.DC_DIR}}/infra.yml"
+
+tasks:
+    default:
+        cmds:
+            - echo 'provide a task name'
+    format:
+        cmds:
+            - "{{.MVNW}} spotless:apply"
+    build:
+        cmds:
+            - "{{.MVNW}} clean verify"
+    start_infra:
+        cmds:
+            - "docker compose -f {{.INFRA_DC_FILE}} up -d"
+    stop_infra:
+        cmds:
+            - "docker compose -f {{.INFRA_DC_FILE}} stop"
+            - "docker compose -f {{.INFRA_DC_FILE}} rm -f"
+    restart_infra:
+        cmds:
+            -   task: stop_infra
+            -   task: sleep
+            -   task: start_infra
+    sleep:
+        vars:
+            DURATION: "{{default 5 .DURATION}}"
+        cmds:
+            - "{{.SLEEP_CMD}} {{.DURATION}}"
