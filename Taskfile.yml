@@ -10,9 +10,9 @@ tasks:
     default:
         cmds:
             - echo 'provide a task name'
-    format:
-        cmds:
-            - "{{.MVNW}} spotless:apply"
+    #    format:
+    #        cmds:
+    #            - "{{.MVNW}} spotless:apply"
     build:
         cmds:
             - "{{.MVNW}} clean verify"

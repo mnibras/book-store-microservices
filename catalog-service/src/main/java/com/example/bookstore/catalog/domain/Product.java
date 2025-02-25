@@ -10,7 +10,8 @@ public class Product {
     private String imageUrl;
     private BigDecimal price;
 
-    public Product() {}
+    public Product() {
+    }
 
     public Product(String code, String name, String description, String imageUrl, BigDecimal price) {
         this.code = code;

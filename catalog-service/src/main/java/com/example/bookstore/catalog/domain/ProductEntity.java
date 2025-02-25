@@ -29,10 +29,12 @@ class ProductEntity {
     private String imageUrl;
 
     @Column(nullable = false)
-    @NotNull(message = "Product price is required") @DecimalMin("0.1")
+    @NotNull(message = "Product price is required")
+    @DecimalMin("0.1")
     private BigDecimal price;
 
-    public ProductEntity() {}
+    public ProductEntity() {
+    }
 
     public ProductEntity(Long id, String code, String name, String description, String imageUrl, BigDecimal price) {
         this.id = id;

@@ -2,7 +2,8 @@ package com.example.bookstore.catalog.domain;
 
 class ProductMapper {
 
-    private ProductMapper() {}
+    private ProductMapper() {
+    }
 
     static Product toProduct(ProductEntity productEntity) {
         return new Product(
