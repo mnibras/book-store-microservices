@@ -1,4 +1,4 @@
-package com.example.bookstore.catalog.domain;
+package com.bookstore.catalog.domain;
 
 public class ProductNotFoundException extends RuntimeException {
 

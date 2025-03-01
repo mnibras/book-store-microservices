@@ -1,6 +1,6 @@
-package com.example.bookstore.catalog.web.exception;
+package com.bookstore.catalog.web.exception;
 
-import com.example.bookstore.catalog.domain.ProductNotFoundException;
+import com.bookstore.catalog.domain.ProductNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ProblemDetail;
 import org.springframework.web.bind.annotation.ExceptionHandler;

@@ -1,9 +1,9 @@
-package com.example.bookstore.catalog.web.controllers;
+package com.bookstore.catalog.web.controllers;
 
-import com.example.bookstore.catalog.domain.PagedResult;
-import com.example.bookstore.catalog.domain.Product;
-import com.example.bookstore.catalog.domain.ProductNotFoundException;
-import com.example.bookstore.catalog.domain.ProductService;
+import com.bookstore.catalog.domain.PagedResult;
+import com.bookstore.catalog.domain.Product;
+import com.bookstore.catalog.domain.ProductNotFoundException;
+import com.bookstore.catalog.domain.ProductService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

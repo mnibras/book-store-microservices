@@ -1,4 +1,4 @@
-package com.example.bookstore.catalog;
+package com.bookstore.catalog;
 
 import jakarta.validation.constraints.Min;
 import org.springframework.boot.context.properties.ConfigurationProperties;

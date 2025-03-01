@@ -1,7 +1,7 @@
-package com.example.bookstore.catalog.web.controllers;
+package com.bookstore.catalog.web.controllers;
 
-import com.example.bookstore.catalog.AbstractIT;
-import com.example.bookstore.catalog.domain.Product;
+import com.bookstore.catalog.AbstractIT;
+import com.bookstore.catalog.domain.Product;
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.Test;
 import org.springframework.test.context.jdbc.Sql;

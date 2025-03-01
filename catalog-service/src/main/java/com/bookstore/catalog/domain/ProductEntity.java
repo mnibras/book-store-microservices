@@ -1,4 +1,4 @@
-package com.example.bookstore.catalog.domain;
+package com.bookstore.catalog.domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.DecimalMin;

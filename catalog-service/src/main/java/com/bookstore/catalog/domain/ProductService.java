@@ -1,6 +1,6 @@
-package com.example.bookstore.catalog.domain;
+package com.bookstore.catalog.domain;
 
-import com.example.bookstore.catalog.ApplicationProperties;
+import com.bookstore.catalog.ApplicationProperties;
 import jakarta.transaction.Transactional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

@@ -1,4 +1,4 @@
-package com.example.bookstore.catalog;
+package com.bookstore.catalog;
 
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.BeforeEach;

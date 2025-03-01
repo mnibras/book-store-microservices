@@ -1,4 +1,4 @@
-package com.example.bookstore.catalog.domain;
+package com.bookstore.catalog.domain;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
