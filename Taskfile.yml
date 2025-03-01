@@ -15,16 +15,20 @@ tasks:
     #        cmds:
     #            - "{{.MVNW}} spotless:apply"
 
-    start_infra:
+    build:
+        cmds:
+            - "{{.MVNW}} -pl catalog-service spring-boot:build-image -DskipTests"
+
+    start-infra:
         cmds:
             - "docker compose -f {{.INFRA_DC_FILE}} up -d"
 
-    stop_infra:
+    stop-infra:
         cmds:
             - "docker compose -f {{.INFRA_DC_FILE}} stop"
             - "docker compose -f {{.INFRA_DC_FILE}} rm -f"
 
-    restart_infra:
+    restart-infra:
         cmds:
             -   task: stop_infra
             -   task: sleep
@@ -35,10 +39,6 @@ tasks:
             DURATION: "{{default 5 .DURATION}}"
         cmds:
             - "{{.SLEEP_CMD}} {{.DURATION}}"
-
-    build:
-        cmds:
-            - "{{.MVNW}} -pl catalog-service spring-boot:build-image -DskipTests"
 
     start:
         deps: [ build ]

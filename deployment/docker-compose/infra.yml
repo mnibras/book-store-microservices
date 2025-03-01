@@ -10,7 +10,7 @@ services:
         ports:
             - "15432:5432"
         volumes:
-            - catalog_data:/var/lib/postgresql/data
+            - catalog-data:/var/lib/postgresql/data
         healthcheck:
             test: [ "CMD-SHELL", "pg_isready -U postgres" ]
             interval: 10s
@@ -21,4 +21,4 @@ services:
                 limits:
                     memory: 500m
 volumes:
-    catalog_data:
+    catalog-data:
