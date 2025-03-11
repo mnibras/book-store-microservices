@@ -1,5 +1,6 @@
 package com.bookstore.order.web.exception;
 
+import com.bookstore.order.domain.InvalidOrderException;
 import com.bookstore.order.domain.OrderNotFoundException;
 import org.springframework.http.*;
 import org.springframework.lang.Nullable;
@@ -41,6 +42,17 @@ class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(HttpStatus.NOT_FOUND, e.getMessage());
         problemDetail.setTitle("Order Not Found");
         problemDetail.setType(NOT_FOUND_TYPE);
+        problemDetail.setProperty(SERVICE, SERVICE_NAME);
+        problemDetail.setProperty(ERROR_CATEGORY, GENERIC);
+        problemDetail.setProperty(TIMESTAMP, Instant.now());
+        return problemDetail;
+    }
+
+    @ExceptionHandler(InvalidOrderException.class)
+    ProblemDetail handleInvalidOrderException(InvalidOrderException e) {
+        ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(HttpStatus.BAD_REQUEST, e.getMessage());
+        problemDetail.setTitle("Invalid Order Creation Request");
+        problemDetail.setType(BAD_REQUEST_TYPE);
         problemDetail.setProperty(SERVICE, SERVICE_NAME);
         problemDetail.setProperty(ERROR_CATEGORY, GENERIC);
         problemDetail.setProperty(TIMESTAMP, Instant.now());
