@@ -23,7 +23,7 @@ class ProductController {
     }
 
     @GetMapping("/{code}")
-    ResponseEntity<Product> getProductByCode(@PathVariable String code) {
+    ResponseEntity<Product> getProductByCode(@PathVariable String code) throws InterruptedException {
         return productService.getProductByCode(code)
                 .map(ResponseEntity::ok)
                 .orElseThrow(() -> ProductNotFoundException.forCode(code));
