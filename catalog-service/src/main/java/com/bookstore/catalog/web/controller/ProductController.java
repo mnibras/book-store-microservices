@@ -1,4 +1,4 @@
-package com.bookstore.catalog.web.controllers;
+package com.bookstore.catalog.web.controller;
 
 import com.bookstore.catalog.domain.PagedResult;
 import com.bookstore.catalog.domain.Product;
@@ -23,7 +23,7 @@ class ProductController {
     }
 
     @GetMapping("/{code}")
-    ResponseEntity<Product> getProductByCode(@PathVariable String code) throws InterruptedException {
+    ResponseEntity<Product> getProductByCode(@PathVariable String code) {
         return productService.getProductByCode(code)
                 .map(ResponseEntity::ok)
                 .orElseThrow(() -> ProductNotFoundException.forCode(code));

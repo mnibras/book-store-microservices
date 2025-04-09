@@ -1,4 +1,4 @@
-package com.bookstore.catalog.web.controllers;
+package com.bookstore.catalog.web.controller;
 
 import com.bookstore.catalog.AbstractIT;
 import com.bookstore.catalog.domain.Product;
