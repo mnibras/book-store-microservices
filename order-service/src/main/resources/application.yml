@@ -11,6 +11,11 @@ spring:
         password: ${DB_PASSWORD:postgres}
     jpa:
         open-in-view: false
+        show-sql: true
+        properties:
+            hibernate:
+                format_sql: true
+                use_sql_comments: true
     rabbitmq:
         host: ${RABBITMQ_HOST:localhost}
         port: ${RABBITMQ_PORT:5672}
