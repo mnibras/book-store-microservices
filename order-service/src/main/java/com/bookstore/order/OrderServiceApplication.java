@@ -1,6 +1,5 @@
 package com.bookstore.order;
 
-import net.javacrumbs.shedlock.spring.annotation.EnableSchedulerLock;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
@@ -12,7 +11,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @SpringBootApplication
 @ConfigurationPropertiesScan
 @EnableScheduling
-@EnableSchedulerLock(defaultLockAtMostFor = "10m")
 public class OrderServiceApplication {
 
     public static void main(String[] args) {
