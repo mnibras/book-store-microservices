@@ -10,6 +10,7 @@ import java.time.Instant;
 
 @Component
 class OrderEventsPublishingJob {
+
     private static final Logger log = LoggerFactory.getLogger(OrderEventsPublishingJob.class);
 
     private final OrderEventService orderEventService;

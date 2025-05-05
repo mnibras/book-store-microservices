@@ -10,6 +10,7 @@ import java.time.Instant;
 
 @Component
 class NewOrderProcessingJob {
+
     private static final Logger log = LoggerFactory.getLogger(NewOrderProcessingJob.class);
 
     private final OrderService orderService;
