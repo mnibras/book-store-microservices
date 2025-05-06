@@ -31,6 +31,7 @@ public class NotificationService {
                         Order Created Notification
                         ----------------------------------------------------
                         Dear %s,
+                        
                         Your order with orderNumber: %s has been created successfully.
                         
                         Thanks,
