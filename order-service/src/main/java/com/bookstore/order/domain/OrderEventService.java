@@ -90,13 +90,11 @@ public class OrderEventService {
                 orderEventPublisher.publish(orderCreatedEvent);
                 break;
             case ORDER_DELIVERED:
-                OrderDeliveredEvent orderDeliveredEvent =
-                        fromJsonPayload(event.getPayload(), OrderDeliveredEvent.class);
+                OrderDeliveredEvent orderDeliveredEvent = fromJsonPayload(event.getPayload(), OrderDeliveredEvent.class);
                 orderEventPublisher.publish(orderDeliveredEvent);
                 break;
             case ORDER_CANCELLED:
-                OrderCancelledEvent orderCancelledEvent =
-                        fromJsonPayload(event.getPayload(), OrderCancelledEvent.class);
+                OrderCancelledEvent orderCancelledEvent = fromJsonPayload(event.getPayload(), OrderCancelledEvent.class);
                 orderEventPublisher.publish(orderCancelledEvent);
                 break;
             case ORDER_PROCESSING_FAILED:
