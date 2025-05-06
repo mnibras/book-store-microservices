@@ -52,7 +52,7 @@ services:
         ports:
             - "35432:5432"
         volumes:
-            - order-data:/var/lib/postgresql/data
+            - notification-data:/var/lib/postgresql/data
         healthcheck:
             test: [ "CMD-SHELL", "pg_isready -U postgres" ]
             interval: 10s
@@ -94,4 +94,5 @@ services:
 volumes:
     catalog-data:
     order-data:
+    notification-data:
     bookstore-rabbitmq-data:
