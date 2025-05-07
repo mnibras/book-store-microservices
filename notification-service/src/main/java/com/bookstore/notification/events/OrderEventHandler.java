@@ -7,12 +7,14 @@ import com.bookstore.notification.domain.model.OrderCancelledEvent;
 import com.bookstore.notification.domain.model.OrderCreatedEvent;
 import com.bookstore.notification.domain.model.OrderDeliveredEvent;
 import com.bookstore.notification.domain.model.OrderErrorEvent;
+import org.springframework.transaction.annotation.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
 @Component
+@Transactional
 public class OrderEventHandler {
 
     private static final Logger log = LoggerFactory.getLogger(OrderEventHandler.class);
