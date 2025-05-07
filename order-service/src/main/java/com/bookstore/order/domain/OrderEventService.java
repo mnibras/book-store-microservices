@@ -11,9 +11,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-import static com.bookstore.order.domain.model.OrderEventType.ORDER_CANCELLED;
-import static com.bookstore.order.domain.model.OrderEventType.ORDER_PROCESSING_FAILED;
-
 @Service
 @Transactional
 public class OrderEventService {
