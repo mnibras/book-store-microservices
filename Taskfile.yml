@@ -20,6 +20,7 @@ tasks:
         cmds:
             - "{{.MVNW}} -pl catalog-service spring-boot:build-image -DskipTests -Dspring-boot.build-image.pullPolicy=NEVER"
             - "{{.MVNW}} -pl order-service spring-boot:build-image -DskipTests -Dspring-boot.build-image.pullPolicy=NEVER"
+            - "{{.MVNW}} -pl notification-service spring-boot:build-image -DskipTests -Dspring-boot.build-image.pullPolicy=NEVER"
 
     start-infra:
         cmds:
