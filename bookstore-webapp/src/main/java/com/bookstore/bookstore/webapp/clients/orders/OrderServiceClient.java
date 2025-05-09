@@ -8,6 +8,7 @@ import org.springframework.web.service.annotation.PostExchange;
 import java.util.List;
 
 public interface OrderServiceClient {
+
     @PostExchange("/orders/api/orders")
     OrderConfirmationDTO createOrder(@RequestBody CreateOrderRequest orderRequest);
 
@@ -16,4 +17,5 @@ public interface OrderServiceClient {
 
     @GetExchange("/orders/api/orders/{orderNumber}")
     OrderDTO getOrder(@PathVariable String orderNumber);
+
 }
