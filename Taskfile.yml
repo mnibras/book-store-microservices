@@ -34,9 +34,9 @@ tasks:
 
     restart-infra:
         cmds:
-            -   task: stop_infra
+            -   task: stop-infra
             -   task: sleep
-            -   task: start_infra
+            -   task: start-infra
 
     sleep:
         vars:
