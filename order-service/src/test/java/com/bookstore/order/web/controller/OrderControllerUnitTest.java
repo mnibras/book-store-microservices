@@ -48,7 +48,7 @@ class OrderControllerUnitTests {
     @ParameterizedTest(name = "[{index}]-{0}")
     @MethodSource("createOrderRequestProvider")
     void shouldReturnBadRequestWhenOrderPayloadIsInvalid(CreateOrderRequest request) throws Exception {
-        given(orderService.createOrder(eq("siva"), any(CreateOrderRequest.class)))
+        given(orderService.createOrder(eq("nibras"), any(CreateOrderRequest.class)))
                 .willReturn(null);
 
         mockMvc.perform(post("/api/orders")
