@@ -20,7 +20,6 @@ public class CatalogServiceClientConfig {
                     customizer.setReadTimeout(Duration.ofSeconds(5));
                 })
                 .build();
-
         return builder.baseUrl(properties.catalogServiceUrl())
                 .requestFactory(requestFactory)
                 .build();
